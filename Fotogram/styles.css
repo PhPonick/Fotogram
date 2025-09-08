@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #5c5c5c;
+    color: whitesmoke;
+}
+p {
+    background-color: #3d3d3d;
+    color: whitesmoke;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #3d3d3d;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: whitesmoke;
+    margin: 0px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3d3d3d;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: whitesmoke;
+    margin: 0px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 175px;
+    margin-bottom: 70px;
+}
+
+.logo_img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #3d3d3d;
+}
+
+.logo_text{
+    font-size: 3em;
+    font-weight: bold;
+    background-color: #3d3d3d;
+}
+
+.single_element{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 8px;
+    background-color: #3d3d3d;
+}
+
+.single_element img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #5c5c5c;
+}
+
+dialog{
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    background-color: transparent;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+dialog img{
+    width: 80vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #3d3d3d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.dialog-footer button {
+    background: #3d3d3d;
+    color: whitesmoke;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 10px;
+}
