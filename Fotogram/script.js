@@ -23,7 +23,6 @@ const imagesAltTags = [
 
 let currentImageIndex = 0;
 
-
 function init() {
     renderImages();
 }
@@ -54,6 +53,12 @@ function getImgTemplate(i) {
 function openDialog(imageIndex) {
     const dialog = document.getElementById("imageDialog");
     dialog.showModal();
+    const dialogListener = document.querySelector("dialog");
+    dialogListener.addEventListener("click", (event) => {
+        if (event.target === dialogListener) {
+            closeDialog();
+        }
+});
 }
 
 function closeDialog() {
@@ -63,16 +68,17 @@ function closeDialog() {
 
 function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
-    updateDialogImage();
+    updateDialogImage(currentImageIndex);
 }
 
 function backImage() {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    updateDialogImage();
+    updateDialogImage(currentImageIndex);
 }
 
-function updateDialogImage() {
+function updateDialogImage(currentImageIndex) {
     const dialogImage = document.querySelector(".dialog-image");
     dialogImage.src = images[currentImageIndex];
     dialogImage.alt = imagesAltTags[currentImageIndex];
 }
+
